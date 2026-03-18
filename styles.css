@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fdf6ec;
+}
+
+main {
+  flex: 1;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+#footer {
+  background-color: #1a1a1a;
+  margin-top: 20px;
+}
+
+.card {
+  max-width: 400px;
+  margin: auto;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
