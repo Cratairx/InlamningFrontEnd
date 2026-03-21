@@ -11,8 +11,38 @@ async function loadComponent(id, file) {
   }
 }
 
-// Load both when the page is ready
-document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("header", "header.html");
-  loadComponent("footer", "footer.html");
+// satta await för att det inte ska bli problem senare
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadComponent("header", "header.html");
+  await loadComponent("footer", "footer.html");
 });
+
+fetch("https://fakestoreapi.com/products")
+  .then(res => res.json())
+  .then(products => {
+    products.forEach(product => {
+      const card = `
+        <div class="col">
+          <div class="card h-100">
+            <img class="card-img-top" src="${product.image}" />
+            <div class="card-body">
+              <h5 class="card-title">${product.title}</h5>
+              <p class="card-text text-muted">${product.description}</p>
+              <p class="fw-bold">${product.price} kr</p>
+              <a href="#" class="btn btn-primary w-100">Add to cart</a>
+            </div>
+          </div>
+        </div>
+      `;
+      document.getElementById("product-container").innerHTML += card;
+    });
+
+    // after forEach, not inside it!
+    document.querySelectorAll(".btn.btn-primary").forEach(button => {
+      button.addEventListener("click", () => {
+        alert("Added to cart!");
+        window.location.href = "Orderform.html";
+        
+      });
+    });
+  });
