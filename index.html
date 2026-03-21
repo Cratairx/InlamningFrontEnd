@@ -19,108 +19,21 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- CSS  testar min branchs!-->
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="header"></div>
 
-    <!-- Man kommer använda cards för produkterna men man kommer göra en metod som fetchar infon från api och sedan tar ett standard kort och fixar det. Copy paste av nedan är bara
-     för att se hur det skulle kunna se ut, ta bort detta sen! -->
     <main class="container-fluid mt-4">
       <h1>Välkommen</h1>
       <p>Testing</p>
 
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="https://picsum.photos/300/200" />
-            <div class="card-body">
-              <h5 class="card-title">Product Name</h5>
-              <p class="card-text text-muted">Short description here</p>
-              <p class="fw-bold">299 kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Här kommer produkterna att läggas till varsina kort med hjälp av JS -->
+      <div
+        class="row row-cols-1 row-cols-md-4 g-4"
+        id="product-container"
+      ></div>
     </main>
     <div id="footer"></div>
     <!-- Glöm inte kopiera dess scrips in i varje fil -->
