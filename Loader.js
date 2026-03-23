@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 fetch("https://fakestoreapi.com/products")
-  .then(res => res.json())
-  .then(products => {
-    products.forEach(product => {
+  .then((res) => res.json())
+  .then((products) => {
+    products.forEach((product) => {
       const card = `
         <div class="col">
           <div class="card h-100">
@@ -36,13 +36,12 @@ fetch("https://fakestoreapi.com/products")
       `;
       document.getElementById("product-container").innerHTML += card;
     });
+    
 
-    // after forEach, not inside it!
-    document.querySelectorAll(".btn.btn-primary").forEach(button => {
+    document.querySelectorAll(".btn.btn-primary").forEach((button) => {
       button.addEventListener("click", () => {
         alert("Added to cart!");
         window.location.href = "Orderform.html";
-        
       });
     });
   });
