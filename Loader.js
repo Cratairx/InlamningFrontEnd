@@ -1,5 +1,3 @@
-//Den här kan ha vart gjort med lite hjälp ;) behövde bara få bort header och footer så fort som möjligt och detta funkade
-
 async function loadComponent(id, file) {
   try {
     const response = await fetch(file);
@@ -11,7 +9,6 @@ async function loadComponent(id, file) {
   }
 }
 
-// satta await för att det inte ska bli problem senare
 document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("header", "header.html");
   await loadComponent("footer", "footer.html");
@@ -37,7 +34,6 @@ fetch("https://fakestoreapi.com/products")
       `;
       document.getElementById("product-grid").innerHTML += card;
     });
-    
 
     document.querySelectorAll(".btn.btn-warning").forEach((button) => {
       button.addEventListener("click", () => {
