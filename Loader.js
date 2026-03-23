@@ -37,7 +37,7 @@ fetch("https://fakestoreapi.com/products")
       document.getElementById("product-container").innerHTML += card;
     });
 
-    // after forEach, not inside it!
+    
     document.querySelectorAll(".btn.btn-primary").forEach(button => {
       button.addEventListener("click", () => {
         alert("Added to cart!");
