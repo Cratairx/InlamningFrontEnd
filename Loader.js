@@ -22,23 +22,24 @@ fetch("https://fakestoreapi.com/products")
   .then((products) => {
     products.forEach((product) => {
       const card = `
-        <div class="col">
-          <div class="card h-100">
-            <img class="card-img-top" src="${product.image}" />
-            <div class="card-body">
+          <div class="col-12 col-sm-6 col-lg-3">
+              <div class="card h-100">
+            <img class="card-img-top p-3" src="${product.image}" alt="${product.title}" 
+           style="height:220px;object-fit:contain;background:#161616" />
+            <div class="card-body d-flex flex-column">
               <h5 class="card-title">${product.title}</h5>
-              <p class="card-text text-muted">${product.description}</p>
+              <p class="card-text flex-grow-1 text-truncate">${product.description}</p>
               <p class="fw-bold">${product.price} kr</p>
-              <a href="#" class="btn btn-primary w-100">Add to cart</a>
+              <a href="#" class="btn btn-warning mt-auto w-100">Add to cart</a>
             </div>
           </div>
         </div>
       `;
-      document.getElementById("product-container").innerHTML += card;
+      document.getElementById("product-grid").innerHTML += card;
     });
     
 
-    document.querySelectorAll(".btn.btn-primary").forEach((button) => {
+    document.querySelectorAll(".btn.btn-warning").forEach((button) => {
       button.addEventListener("click", () => {
         alert("Added to cart!");
         window.location.href = "Orderform.html";
