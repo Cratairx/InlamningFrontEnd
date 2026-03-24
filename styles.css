@@ -13,6 +13,7 @@ main {
   position: sticky;
   top: 0;
   z-index: 1030;
+  
 }
 
 #footer {
@@ -29,3 +30,16 @@ main {
   height: 300px;
   object-fit: cover;
 }
+.fa-cart-shopping{
+color: white;
+
+}
+
+/* så här kan man få en backgrundsbild på navbaren. men den måste 
+/* vara 1920*200 för att se bra ut. 
+/*.navbar.navbar-expand-lg  {
+  background-image: url('Images/navBarImage.png') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60px;}*/
