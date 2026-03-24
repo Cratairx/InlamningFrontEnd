@@ -37,7 +37,7 @@ fetch("https://fakestoreapi.com/products")
       document.getElementById("product-container").innerHTML += card;
     });
 
-    // after forEach, not inside it!
+    
     document.querySelectorAll(".btn.btn-primary").forEach(button => {
       button.addEventListener("click", () => {
         alert("Added to cart!");
@@ -46,3 +46,17 @@ fetch("https://fakestoreapi.com/products")
       });
     });
   });
+     
+  // fixa så denna fungerar
+  const form = document.querySelector("form");
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  form.classList.add("was-validated"); 
+
+  if(!form.checkValidity()) {
+    return;
+  }
+  
+ 
+});
+ 
