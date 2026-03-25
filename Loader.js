@@ -41,6 +41,11 @@ fetch("https://fakestoreapi.com/products")
       
        cartCounter++;
        document.querySelector( ".fa-cart-shopping").textContent = cartCounter; 
+    
+    document.querySelectorAll(".btn.btn-primary").forEach(button => {
+      button.addEventListener("click", () => {
+        alert("Added to cart!");
+        window.location.href = "Orderform.html";
         
       });
     });
@@ -113,4 +118,5 @@ Ort: Min 2 tecken och Max 20 tecken*/
         window.location.href = "Orderform.html";
       });
     });
-  
+  })
+});
