@@ -1,12 +1,54 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #fdf6ec;
+
+body { 
+  background: #1f1f1f; 
+  color: #f1f1f1; 
+  min-height: 100vh; 
+} 
+
+  
+
+header, footer { 
+  color: #fff; 
+} 
+
+ 
+
+header h1, header p { 
+  color: #ffb347; 
+} 
+
+ 
+
+#product-grid .card { 
+  background: #2b2b2b; 
+  border: 1px solid #ffb347; 
+} 
+
+ 
+
+#product-grid .card:hover { 
+  transform: scale(1.01); 
+  transition: transform 0.15s ease-in-out; 
+} 
+
+ 
+
+#product-grid .card-title { 
+  color: #ffd966; 
+  min-height: 3rem; 
+} 
+
+
+
+#product-grid .card-text { 
+  color: #ffd966; 
+  font-size: 0.9rem; 
 }
 
-main {
-  flex: 1;
+
+
+#product-grid .card p {
+  color: #ffffff;
 }
 
 #header {
@@ -15,16 +57,48 @@ main {
   z-index: 1030;
   
 }
+ 
 
-#footer {
-  background-color: #1a1a1a;
-  margin-top: 20px;
-}
+#order-section { 
+  background: #2a2a2a; 
+  border: 1px solid #ffb347; 
+} 
 
-.card {
-  max-width: 400px;
-  margin: auto;
-}
+ 
+
+.btn-warning { 
+  background: linear-gradient(135deg, #ffa500, #ffd700); 
+  border-color: #ffb347; 
+  color: #1f1f1f; 
+} 
+
+ 
+/* Här Simon har du som du kan använda till felmeddelanden om du vill, fixade när jag ändå höll på. 
+Testat dem i ett eget projekt så vet att de fungerar och ser bra ut*/
+.alert-success { 
+  background: #2a5f2a; 
+  color: #e3fceb; 
+  border: 1px solid #7ecf7e; 
+} 
+
+ 
+
+.alert-danger { 
+  background: #6a1f1f; 
+  color: #ffe1e1; 
+  border: 1px solid #d96666; 
+} 
+
+ 
+
+@media (max-width: 576px) { 
+  #order-section { 
+    padding: 1rem; 
+  } 
+} 
+
+ 
+
 
 .card-img-top {
   height: 300px;
