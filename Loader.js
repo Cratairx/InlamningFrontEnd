@@ -32,7 +32,7 @@ fetch("https://fakestoreapi.com/products")
           </div>
         </div>
       `;
-      document.getElementById("product-grid").innerHTML += card;
+      document.querySelector(".product-grid").innerHTML += card;
     });
 
     document.querySelectorAll(".btn.btn-warning").forEach((button) => {
