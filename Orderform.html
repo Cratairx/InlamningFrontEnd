@@ -3,8 +3,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orderform</title>
+  <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Order Form</h1>
+    <div class="container">
+      <form novalidate> 
+        <!-- Namn -->
+        <div class="mb-3">
+          <label class="form-label">Namn</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            minlength="2"
+            maxlength="50"
+          />
+          <div class="invalid-feedback">Namn måste vara mellan 2-50 tecken</div>
+        </div>
+
+        <!-- E-post -->
+        <div class="mb-3">
+          <label class="form-label">E-post</label>
+          <input type="email" class="form-control" required maxlength="50" />
+          <div class="invalid-feedback">
+            Ange en giltig epost (max 50 tecken)
+          </div>
+        </div>
+
+        <!-- Telefon   "-->
+        <div class="mb-3">
+          <label class="form-label">Telefonnummer</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+           pattern="[0-9\(\)\-\+\ ]{1,20}"
+            maxlength="20"
+          />
+          <div class="invalid-feedback">
+            Endast siffror, (), - (max 20 tecken)
+          </div>
+        </div>
+
+        <!-- Gatuadress -->
+        <div class="mb-3">
+          <label class="form-label">Gatuadress</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            minlength="2"
+            maxlength="50"
+          />
+          <div class="invalid-feedback">2-50 tecken kävs</div>
+        </div>
+
+        <!-- Postnummer -->
+        <div class="mb-3">
+          <label class="form-label">Postnummer</label>
+          <input type="text" class="form-control" pattern="[0-9]{5}" required />
+          <div class="invalid-feedback">Postnummer måste vara 5 siffror</div>
+        </div>
+
+        <!-- Ort -->
+        <div class="mb-3">
+          <label class="form-label">Ort</label>
+          <input
+            type="text"
+            class="form-control"
+            required
+            minlength="2"
+            maxlength="20"
+          />
+          <div class="invalid-feedback">2-20 tecken krävs</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Skicka</button>      
+       </form>       
+    
+  <script src="loader.js"></script>
   </body>
 </html>
