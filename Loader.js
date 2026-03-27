@@ -55,11 +55,5 @@ document.querySelector("form").addEventListener("submit", (e) => {
   
  
 });
- document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("address").value = "";
-  document.getElementById("phone").value = "";
-  alert("Order placed successfully!");
-  
-  return true;
+
   
