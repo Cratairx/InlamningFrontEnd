@@ -11,6 +11,7 @@
     />
   </head>
   <body>
+    <div id="header"></div>
     <div class="container">
       <form novalidate>
         <!-- Namn -->
@@ -85,7 +86,10 @@
 
         <button type="submit" class="btn btn-primary">Skicka</button>
       </form>
+      <script src="loader.js"></script>
+      <div id="footer"></div>
     </div>
+
     <script>
       const form = document.querySelector("form");
       form.addEventListener("submit", (e) => {
