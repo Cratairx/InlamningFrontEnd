@@ -35,14 +35,14 @@
           </div>
         </div>
 
-        <!-- Telefon   "-->
+        <!-- Telefon -->
         <div class="mb-3">
           <label class="form-label">Telefonnummer</label>
           <input
             type="tel"
             class="form-control"
             required
-            pattern="[0-9+\-\ ()]{5,20}"
+            pattern="[0-9+\- ]{1,20}"
             maxlength="20"
           />
           <div class="invalid-feedback">
@@ -66,13 +66,13 @@
         <!-- Postnummer -->
         <div class="mb-3">
           <label class="form-label">Postnummer</label>
-          <input type="text" class="form-control" pattern="[0-9]{5}" required />
+          <input type="text" class="form-control" required pattern="[0-9]{5}" />
           <div class="invalid-feedback">Postnummer måste vara 5 siffror</div>
         </div>
 
         <!-- Ort -->
         <div class="mb-3">
-          <label class="form-label">Ort</label>
+          <label class="form-label">Orrt</label>
           <input
             type="text"
             class="form-control"
@@ -86,7 +86,14 @@
         <button type="submit" class="btn btn-primary">Skicka</button>
       </form>
     </div>
-
-    <script src="loader.js"></script>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+        }
+        form.classList.add("was-validated");
+      });
+    </script>
   </body>
 </html>
