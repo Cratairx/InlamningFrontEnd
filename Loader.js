@@ -66,18 +66,20 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 });
 
-  function validateForm() {
+ function validateForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const address = document.getElementById("address").value;
   const phone = document.getElementById("phone").value;
 
+  
+
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("address").value = "";
   document.getElementById("phone").value = "";
-
+  alert("Order submitted successfully!");
   return true;
 }
- validateForm();
+
  
