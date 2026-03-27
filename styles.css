@@ -19,41 +19,41 @@ header h1, header p {
 
  
 
-#product-grid .card { 
+.product-grid .card { 
   background: #2b2b2b; 
   border: 1px solid #ffb347; 
 } 
 
  
 
-#product-grid .card:hover { 
+.product-grid .card:hover { 
   transform: scale(1.01); 
   transition: transform 0.15s ease-in-out; 
 } 
 
  
 
-#product-grid .card-title { 
+.product-grid .card-title { 
   color: #ffd966; 
   min-height: 3rem; 
 } 
 
 
 
-#product-grid .card-text { 
+.product-grid .card-text { 
   color: #ffd966; 
   font-size: 0.9rem; 
 }
 
 
 
-#product-grid .card p {
+.product-grid .card p {
   color: #ffffff;
 }
 
  
 
-#order-section { 
+.order-section { 
   background: #2a2a2a; 
   border: 1px solid #ffb347; 
 } 
