@@ -49,15 +49,19 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   form.classList.add("was-validated"); 
    alert("Order submitted successfully!");
-    const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const address = document.getElementById("address").value;
+  const address = document.getElementById("adress").value;
   const phone = document.getElementById("phone").value;
+  const zipcode = document.getElementById("zipcode").value;
+  const city = document.getElementById("city").value;
 
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("address").value = "";
+  document.getElementById("adress").value = "";
   document.getElementById("phone").value = "";
+  document.getElementById("zipcode").value = "";
+  document.getElementById("city").value = "";
 
   if(!form.checkValidity()) {
     return;
@@ -66,20 +70,28 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 });
 
- function validateForm() {
+/* function validateForm() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const address = document.getElementById("address").value;
+  const address = document.getElementById("adress").value;
   const phone = document.getElementById("phone").value;
+  const zipcode = document.getElementById("zipcode").value;
+
+  if (!name || !email || !address || !phone || !zipcode) {
+    alert("Please fill in all fields.");
+    return false;
+  }
 
   
 
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
-  document.getElementById("address").value = "";
+  document.getElementById("adress").value = "";
   document.getElementById("phone").value = "";
+  document.getElementById("zipcode").value = "";
   alert("Order submitted successfully!");
   return true;
-}
+}*/
+
 
  
