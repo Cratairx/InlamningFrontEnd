@@ -46,7 +46,7 @@ fetch("https://fakestoreapi.com/products")
    // fixa så denna fungerar
   const form = document.querySelector("form");
 document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
+  e.preventDefault(); 
   form.classList.add("was-validated"); 
    alert("Order submitted successfully!");
   const name = document.getElementById("name").value;
@@ -69,6 +69,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
   
 
 });
+
+
 
 /* function validateForm() {
   const name = document.getElementById("name").value;
