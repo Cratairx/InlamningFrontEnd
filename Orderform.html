@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <form novalidate> 
+      <form novalidate>
         <!-- Namn -->
         <div class="mb-3">
           <label class="form-label">Namn</label>
@@ -39,10 +39,10 @@
         <div class="mb-3">
           <label class="form-label">Telefonnummer</label>
           <input
-            type="text"
+            type="tel"
             class="form-control"
             required
-           pattern="^[0-9+\-\s()]{5,20}$"
+            pattern="[0-9+\-\ ()]{5,20}"
             maxlength="20"
           />
           <div class="invalid-feedback">
@@ -83,9 +83,10 @@
           <div class="invalid-feedback">2-20 tecken krävs</div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Skicka</button>      
-       </form>       
-    
-  <script src="loader.js"></script>
+        <button type="submit" class="btn btn-primary">Skicka</button>
+      </form>
+    </div>
+
+    <script src="loader.js"></script>
   </body>
 </html>
