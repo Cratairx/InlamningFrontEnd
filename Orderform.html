@@ -18,6 +18,7 @@
         <div class="mb-3">
           <label class="form-label">Namn</label>
           <input
+            id="name"
             type="text"
             class="form-control"
             required
@@ -30,20 +31,26 @@
         <!-- E-post -->
         <div class="mb-3">
           <label class="form-label">E-post</label>
-          <input type="email" class="form-control" required maxlength="50" />
+          <input
+            id="email"
+            type="email"
+            class="form-control"
+            required
+            maxlength="50"
+          />
           <div class="invalid-feedback">
             Ange en giltig epost (max 50 tecken)
           </div>
         </div>
 
-        <!-- Telefon  rör ej pattern Sjukt jobbig att få rätt!-->
+        <!-- Telefon  rör ej pattern Sjukt jobbig att få rätt! pattern="[0-9+\- ]{1,20}" -->
         <div class="mb-3">
           <label class="form-label">Telefonnummer</label>
           <input
+            id="phone"
             type="tel"
             class="form-control"
             required
-            pattern="[0-9+\- ]{1,20}"
             maxlength="20"
           />
           <div class="invalid-feedback">
@@ -55,6 +62,7 @@
         <div class="mb-3">
           <label class="form-label">Gatuadress</label>
           <input
+            id="adress"
             type="text"
             class="form-control"
             required
@@ -67,7 +75,13 @@
         <!-- Postnummer -->
         <div class="mb-3">
           <label class="form-label">Postnummer</label>
-          <input type="text" class="form-control" required pattern="[0-9]{5}" />
+          <input
+            id="zipcode"
+            type="text"
+            class="form-control"
+            required
+            pattern="[0-9]{5}"
+          />
           <div class="invalid-feedback">Postnummer måste vara 5 siffror</div>
         </div>
 
@@ -75,6 +89,7 @@
         <div class="mb-3">
           <label class="form-label">Orrt</label>
           <input
+            id="city"
             type="text"
             class="form-control"
             required
@@ -95,7 +110,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
+    <!-- <script> 
       const form = document.querySelector("form");
       form.addEventListener("submit", (e) => {
         if (!form.checkValidity()) {
@@ -103,6 +118,6 @@
         }
         form.classList.add("was-validated");
       });
-    </script>
+    </script>-->
   </body>
 </html>
