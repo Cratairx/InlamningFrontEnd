@@ -27,7 +27,8 @@ fetch("https://fakestoreapi.com/products")
               <h5 class="card-title">${product.title}</h5>
               <p class="card-text flex-grow-1 text-truncate">${product.description}</p>
               <p class="fw-bold">${product.price} kr</p>
-              <a href="#" class="btn btn-warning mt-auto w-100">Add to cart</a>
+              <a href="#" class="btn btn-warning mt-auto w-100">
+              Add to cart</a>
             </div>
           </div>
         </div>
@@ -37,7 +38,7 @@ fetch("https://fakestoreapi.com/products")
 
     document.querySelectorAll(".btn.btn-warning").forEach((button) => {
       button.addEventListener("click", () => {
-        alert("Added to cart!");
+        
         window.location.href = "Orderform.html";
       });
     });
