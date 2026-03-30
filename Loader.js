@@ -137,6 +137,8 @@ if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
 
   if (isValid) {
     alert("Order submitted!");
+    
+    
     form.reset();
   }
   
