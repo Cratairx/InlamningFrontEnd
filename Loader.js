@@ -44,28 +44,83 @@ fetch("https://fakestoreapi.com/products")
     });
   });
    // fixa så denna fungerar
+   
   const form = document.querySelector("form");
-document.querySelector("form").addEventListener("submit", (e) => {
+  if (!form) return;
+//document.querySelector("form")
+form.addEventListener("submit", (e) => {
   e.preventDefault(); 
+
+  let isValid = true;
+
   form.classList.add("was-validated"); 
-   alert("Order submitted successfully!");
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const address = document.getElementById("adress").value;
-  const phone = document.getElementById("phone").value;
-  const zipcode = document.getElementById("zipcode").value;
-  const city = document.getElementById("city").value;
+   //alert("Order submitted successfully!");
+  const name = document.getElementById("name");//.value;
+  const email = document.getElementById("email");//.value;
+  const address = document.getElementById("adress");//.value;
+  const phone = document.getElementById("phone");//.value;
+  const zipcode = document.getElementById("zipcode");//.value;
+  const city = document.getElementById("city");//.value;
 
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("adress").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("zipcode").value = "";
-  document.getElementById("city").value = "";
+  // document.getElementById("name").value = "";
+  // document.getElementById("email").value = "";
+  // document.getElementById("adress").value = "";
+  // document.getElementById("phone").value = "";
+  // document.getElementById("zipcode").value = "";
+  // document.getElementById("city").value = "";
 
-  if(!form.checkValidity()) {
-    return;
+  document.querySelectorAll("input").forEach(input => {
+    input.classList.remove("is-invalid");
+  })
+    // Namn
+ const fullNamePattern = /^(?=.{2,50}$)(?:[a-zA-Z]+(?:\s[a-zA-Z]+){1,})$/;
+
+if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
+  isValid = false;
+  name.value = "";
+  name.placeholder = "Please enter first and last name";
+  name.classList.add("red-placeholder");
+}
+  
+  //telefon
+  const phonePattern = /^[\d()-]{1,20}$/;
+  if (!phonePattern.test(phone.value.trim())) {
+    phone.classList.add("is-invalid");
+    isValid = false;
   }
+  // Email
+  const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  if (!emailPattern.test(email.value.trim())) {
+    email.classList.add("is-invalid");
+    isValid = false;
+  }
+
+  // Adress
+  if (address.value.trim().length < 2) {
+    address.classList.add("is-invalid");
+    isValid = false;
+  }
+
+  // Postnummer
+  if (zipcode.value.trim().length !== 5) {
+    zipcode.classList.add("is-invalid");
+    isValid = false;
+  }
+
+  // Stad
+  if (city.value.trim().length < 2) {
+    city.classList.add("is-invalid");
+    isValid = false;
+  }
+
+  if (isValid) {
+    alert("Order submitted!");
+    form.reset();
+  }
+  
+  // if(!form.checkValidity()) {
+  //   return;
+  // }
   
 
 });
