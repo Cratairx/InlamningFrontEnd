@@ -12,7 +12,7 @@ async function loadComponent(id, file) {
 document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("header", "header.html");
   await loadComponent("footer", "footer.html");
-});
+
 
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
@@ -45,11 +45,15 @@ fetch("https://fakestoreapi.com/products")
   });
    // fixa så denna fungerar
    
-  const form = document.querySelector("form");
-  if (!form) return;
+  
 //document.querySelector("form")
+const form = document.querySelector("form");
+if (!form) return;
+
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); 
+  e.preventDefault();
+  console.log("Formulär skickat!");
+  
 
   let isValid = true;
 
@@ -102,15 +106,21 @@ if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
   }
 
   // Postnummer
-  if (zipcode.value.trim().length !== 5) {
-    zipcode.classList.add("is-invalid");
-    isValid = false;
-  }
+ const zipcodePattern = /^\d+$/;
+    if (zipcode.value.toString().trim().length !== 5 || !zipcodePattern.test(zipcode.value.toString().trim())) {
+      isValid = false;
+      zipcode.value = "";
+      zipcode.placeholder = "Please enter a valid zipcode (5 digits)";
+      zipcode.Input.classList.add("red-placeholder");
+    }
+  
 
   // Stad
   if (city.value.trim().length < 2) {
     city.classList.add("is-invalid");
     isValid = false;
+city.placeholder = "Please enter your city";
+city.input.classList.add("red-placeholder");
   }
 
   if (isValid) {
@@ -123,6 +133,7 @@ if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
   // }
   
 
+});
 });
 
 

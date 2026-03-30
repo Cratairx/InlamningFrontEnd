@@ -22,6 +22,7 @@
             type="text"
             class="form-control"
             placeholder="Jane Doe"
+            required
           />
           <div class="invalid-feedback">Namn måste vara mellan 2-50 tecken</div>
         </div>
@@ -33,6 +34,7 @@
             id="email"
             type="email"
             class="form-control"
+            placeholder="email@exemple.se"
             required
             maxlength="50"
           />
@@ -49,7 +51,8 @@
             type="tel"
             class="form-control"
             required
-            maxlength="20"
+            pattern="[0-9+\- ]{1,20}"
+            placeholder="0123456789"
           />
           <div class="invalid-feedback">
             Endast siffror, (), - (max 20 tecken)
@@ -66,6 +69,7 @@
             required
             minlength="2"
             maxlength="50"
+            placeholder="hittahemgatan 2"
           />
           <div class="invalid-feedback">2-50 tecken kävs</div>
         </div>
@@ -79,13 +83,14 @@
             class="form-control"
             required
             pattern="[0-9]{5}"
+            placeholder="12345"
           />
           <div class="invalid-feedback">Postnummer måste vara 5 siffror</div>
         </div>
 
-        <!-- Ort -->
+        <!-- stad -->
         <div class="mb-3">
-          <label class="form-label">Orrt</label>
+          <label class="form-label">Stad</label>
           <input
             id="city"
             type="text"
@@ -93,6 +98,7 @@
             required
             minlength="2"
             maxlength="20"
+            placeholder="Stockholm"
           />
           <div class="invalid-feedback">2-20 tecken krävs</div>
         </div>
