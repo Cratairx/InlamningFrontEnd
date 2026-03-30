@@ -52,10 +52,10 @@
             class="form-control"
             required
             pattern="[0-9+\- ]{1,20}"
-            placeholder="0123456789"
+            placeholder="01234567"
           />
           <div class="invalid-feedback">
-            Endast siffror, (), - (max 20 tecken)
+            Endast siffror och - , (max 20 tecken)
           </div>
         </div>
 
@@ -100,6 +100,7 @@
             maxlength="20"
             placeholder="Stockholm"
           />
+
           <div class="invalid-feedback">2-20 tecken krävs</div>
         </div>
 
@@ -113,15 +114,5 @@
       src="https://kit.fontawesome.com/55ed10ce42.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- <script> 
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        if (!form.checkValidity()) {
-          e.preventDefault();
-        }
-        form.classList.add("was-validated");
-      });
-    </script>-->
   </body>
 </html>

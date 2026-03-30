@@ -65,6 +65,7 @@ form.addEventListener("submit", (e) => {
   const phone = document.getElementById("phone");//.value;
   const zipcode = document.getElementById("zipcode");//.value;
   const city = document.getElementById("city");//.value;
+ 
 
   // document.getElementById("name").value = "";
   // document.getElementById("email").value = "";
@@ -91,19 +92,36 @@ if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
   if (!phonePattern.test(phone.value.trim())) {
     phone.classList.add("is-invalid");
     isValid = false;
+      phone.value = "";
+    phone.placeholder = "Please enter a valid phone number (max 20 characters)";
+    phone.classList.add("red-placeholder");
   }
   // Email
   const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   if (!emailPattern.test(email.value.trim())) {
     email.classList.add("is-invalid");
     isValid = false;
+    email.value = "";
+    email.placeholder = "Please enter a valid email address";
+    email.classList.add("red-placeholder");
+
   }
 
   // Adress
   if (address.value.trim().length < 2) {
     address.classList.add("is-invalid");
     isValid = false;
+    address.placeholder = "Please enter your address";
+    address.classList.add("red-placeholder");
   }
+   // Stad
+  if (city.value.trim().length < 2) {
+    city.classList.add("is-invalid");
+    isValid = false;
+   city.placeholder = "Please enter your city";
+    city.classList.add("red-placeholder");
+  }
+
 
   // Postnummer
  const zipcodePattern = /^\d+$/;
@@ -111,17 +129,11 @@ if (name.value.trim() === "" || !fullNamePattern.test(name.value.trim())) {
       isValid = false;
       zipcode.value = "";
       zipcode.placeholder = "Please enter a valid zipcode (5 digits)";
-      zipcode.Input.classList.add("red-placeholder");
+      zipcode.classList.add("red-placeholder");
     }
   
 
-  // Stad
-  if (city.value.trim().length < 2) {
-    city.classList.add("is-invalid");
-    isValid = false;
-city.placeholder = "Please enter your city";
-city.input.classList.add("red-placeholder");
-  }
+ 
 
   if (isValid) {
     alert("Order submitted!");
