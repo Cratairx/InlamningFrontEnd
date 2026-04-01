@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Här ska vi lägga in en back up till fakestore ifall att den inte fungerar.https://fakestoreapi.com/products
   //https://dummyjson.com/products någon av dessa ska fungera något annatl fel på min bärbara.
-  fetch("https://fakestoreapi.com/products")
+  fetch("https://dummyjson.com/products")
     .then((res) => res.json())
-    .then((products) => {
-      products.forEach((product) => {
+    .then((data) => {
+      data.products.forEach((product) => {
         const card = `
           <div class="col-12 col-sm-6 col-lg-3">
               <div class="card h-100">
-            <img class="card-img-top p-3" src="${product.image}" alt="${product.title}" 
+            <img class="card-img-top p-3" src="${product.thumbnail}" alt="${product.title}" 
            style="height:220px;object-fit:contain;background:#161616" />
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">${product.title}</h5>
