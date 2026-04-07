@@ -58,7 +58,7 @@ header h1, header p {
   border: 1px solid #ffb347; 
 } 
 
- 
+
 
 .btn-warning { 
   background: linear-gradient(135deg, #ffa500, #ffd700); 
@@ -66,29 +66,42 @@ header h1, header p {
   color: #1f1f1f; 
 } 
 
- 
-/* Här Simon har du som du kan använda till felmeddelanden om du vill, fixade när jag ändå höll på. 
-Testat dem i ett eget projekt så vet att de fungerar och ser bra ut*/
-.alert-success { 
-  background: #2a5f2a; 
-  color: #e3fceb; 
-  border: 1px solid #7ecf7e; 
-} 
 
- 
-
-.alert-danger { 
-  background: #6a1f1f; 
-  color: #ffe1e1; 
-  border: 1px solid #d96666; 
-} 
-
- 
 
 @media (max-width: 576px) { 
   #order-section { 
     padding: 1rem; 
   } 
+} 
+
+
+
+.form-control {
+  background-color: #2b2b2b;
+  border: 1px solid #ffb347;
+  color: #f1f1f1;
+}
+
+
+
+.form-control:focus {
+  background-color: #2b2b2b;
+  border-color: #ffd966;
+  color: #f1f1f1;
+  box-shadow: 0 0 0 0.2rem rgba(255, 179, 71, 0.25);
+}
+
+
+
+.form-label {
+  color: #ffd966;
+}
+
+
+
+.form-control::placeholder {
+  color: #cccccc;
+  opacity: 1;
 } 
 
  
