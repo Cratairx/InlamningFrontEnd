@@ -24,7 +24,6 @@
             placeholder="Jane Doe"
             required
           />
-          <div class="invalid-feedback">Namn måste vara mellan 2-50 tecken</div>
         </div>
 
         <!-- E-post -->
@@ -36,11 +35,7 @@
             class="form-control"
             placeholder="email@exemple.se"
             required
-            maxlength="50"
           />
-          <div class="invalid-feedback">
-            Ange en giltig epost (max 50 tecken)
-          </div>
         </div>
 
         <!-- Telefon  rör ej pattern Sjukt jobbig att få rätt! pattern="[0-9+\- ]{1,20}" -->
@@ -51,12 +46,8 @@
             type="tel"
             class="form-control"
             required
-            pattern="[0-9+\- ]{1,20}"
             placeholder="01234567"
           />
-          <div class="invalid-feedback">
-            Endast siffror och - , (max 20 tecken)
-          </div>
         </div>
 
         <!-- Gatuadress -->
@@ -67,11 +58,8 @@
             type="text"
             class="form-control"
             required
-            minlength="2"
-            maxlength="50"
             placeholder="hittahemgatan 2"
           />
-          <div class="invalid-feedback">2-50 tecken kävs</div>
         </div>
 
         <!-- Postnummer -->
@@ -82,10 +70,8 @@
             type="text"
             class="form-control"
             required
-            pattern="[0-9]{5}"
             placeholder="12345"
           />
-          <div class="invalid-feedback">Postnummer måste vara 5 siffror</div>
         </div>
 
         <!-- stad -->
@@ -96,12 +82,8 @@
             type="text"
             class="form-control"
             required
-            minlength="2"
-            maxlength="20"
             placeholder="Stockholm"
           />
-
-          <div class="invalid-feedback">2-20 tecken krävs</div>
         </div>
 
         <button type="submit" class="btn btn-primary">Skicka</button>

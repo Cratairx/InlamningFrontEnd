@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
       });
     });
-  // fixa så denna fungerar
+  
 
-  //document.querySelector("form")
+
   const form = document.querySelector("form");
   if (!form) return;
 
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         "Please enter a valid phone number (max 20 characters)";
       phone.classList.add("red-placeholder");
     }
-    // Email
+    // Email (?=.{2,50}$) tror denna lilla snutt ska ligga emellan ^ []  i email regexen också eller liknande
     const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     if (!emailPattern.test(email.value.trim())) {
       email.classList.add("is-invalid");
