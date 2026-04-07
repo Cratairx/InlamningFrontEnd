@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       phone.classList.add("red-placeholder");
     }
     // Email (?=.{2,50}$) tror denna lilla snutt ska ligga emellan ^ []  i email regexen också eller liknande
-    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    const emailPattern = /^(?=.{2,50}$)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     if (!emailPattern.test(email.value.trim())) {
       email.classList.add("is-invalid");
       isValid = false;
