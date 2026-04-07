@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadComponent("footer", "footer.html");
 
   // Här ska vi lägga in en back up till fakestore ifall att den inte fungerar.https://fakestoreapi.com/products
-  //https://dummyjson.com/products någon av dessa ska fungera något annatl fel på min bärbara.
-  fetch("https://dummyjson.com/products")
+  //https://dummyjson.com/products någon av dessa ska fungera något annatl fel på min bärbara. "products.json"
+  fetch("products.json")
     .then((res) => res.json())
     .then((data) => {
       data.products.forEach((product) => {
