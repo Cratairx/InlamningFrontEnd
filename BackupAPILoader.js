@@ -56,20 +56,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     let isValid = true;
 
     form.classList.add("was-validated");
-    //alert("Order submitted successfully!");
-    const name = document.getElementById("name"); //.value;
-    const email = document.getElementById("email"); //.value;
-    const address = document.getElementById("adress"); //.value;
-    const phone = document.getElementById("phone"); //.value;
-    const zipcode = document.getElementById("zipcode"); //.value;
-    const city = document.getElementById("city"); //.value;
 
-    // document.getElementById("name").value = "";
-    // document.getElementById("email").value = "";
-    // document.getElementById("adress").value = "";
-    // document.getElementById("phone").value = "";
-    // document.getElementById("zipcode").value = "";
-    // document.getElementById("city").value = "";
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const address = document.getElementById("adress");
+    const phone = document.getElementById("phone");
+    const zipcode = document.getElementById("zipcode");
+    const city = document.getElementById("city");
 
     document.querySelectorAll("input").forEach((input) => {
       input.classList.remove("is-invalid");
@@ -132,39 +125,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (isValid) {
-      
       const link = document.createElement("a");
       link.href = "Sucessfullorder.html";
       link.click();
 
       form.reset();
     }
-
-    // if(!form.checkValidity()) {
-    //   return;
-    // }
   });
 });
-
-/* function validateForm() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const address = document.getElementById("adress").value;
-  const phone = document.getElementById("phone").value;
-  const zipcode = document.getElementById("zipcode").value;
-
-  if (!name || !email || !address || !phone || !zipcode) {
-    alert("Please fill in all fields.");
-    return false;
-  }
-
-  
-
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("adress").value = "";
-  document.getElementById("phone").value = "";
-  document.getElementById("zipcode").value = "";
-  alert("Order submitted successfully!");
-  return true;
-}*/
