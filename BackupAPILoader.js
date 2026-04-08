@@ -132,7 +132,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     if (isValid) {
-      alert("Order submitted!");
+      
+      const link = document.createElement("a");
+      link.href = "Sucessfullorder.html";
+      link.click();
 
       form.reset();
     }
